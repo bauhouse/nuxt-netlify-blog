@@ -1,100 +1,100 @@
-import blogs from './content/blogs.json'
+import blogs from "./content/blogs.json";
 
 export default {
-  mode: 'universal',
+  mode: "universal",
 
   /*
    ** Headers of the page
    */
   head: {
-    title: '<Blog Name>',
+    title: "The Changelog",
     meta: [
       {
-        charset: 'utf-8'
+        charset: "utf-8"
       },
       {
-        name: 'viewport',
-        content: 'width=device-width, initial-scale=1'
+        name: "viewport",
+        content: "width=device-width, initial-scale=1"
       },
       {
-        hid: 'og:url',
-        property: 'og:url',
+        hid: "og:url",
+        property: "og:url",
         content: `https://example.com`
       },
       {
-        hid: 'og:title',
-        property: 'og:title',
-        content: '<Blog Name>'
+        hid: "og:title",
+        property: "og:title",
+        content: "<Blog Name>"
       },
       {
-        hid: 'description',
-        name: 'description',
-        content: '<Blog name> and description'
+        hid: "description",
+        name: "description",
+        content: "<Blog name> and description"
       },
       {
-        hid: 'og:description',
-        property: 'og:description',
-        content: '<Blog name> and description'
+        hid: "og:description",
+        property: "og:description",
+        content: "<Blog name> and description"
       },
       {
-        hid: 'og:image:alt',
-        property: 'og:image:alt',
-        content: '<Blog Name>'
+        hid: "og:image:alt",
+        property: "og:image:alt",
+        content: "<Blog Name>"
       },
       {
-        hid: 'og:article:author',
-        property: 'og:article:author',
-        content: 'https://github.com/code-tribe'
+        hid: "og:article:author",
+        property: "og:article:author",
+        content: "https://github.com/code-tribe"
       },
       {
-        hid: 'og:site_name',
-        property: 'og:site_name',
-        content: '<Blog Name>'
+        hid: "og:site_name",
+        property: "og:site_name",
+        content: "<Blog Name>"
       },
       {
-        hid: 'og:type',
-        property: 'og:type',
-        content: 'website'
+        hid: "og:type",
+        property: "og:type",
+        content: "website"
       },
       {
-        hid: 'twitter:card',
-        name: 'twitter:card',
-        content: 'summary_large_image'
+        hid: "twitter:card",
+        name: "twitter:card",
+        content: "summary_large_image"
       },
       {
-        hid: 'twitter:title',
-        name: 'twitter:title',
-        content: '<Blog Name>'
+        hid: "twitter:title",
+        name: "twitter:title",
+        content: "<Blog Name>"
       },
       {
-        hid: 'twitter:description',
-        name: 'twitter:description',
-        content: '<Blog name> and description'
+        hid: "twitter:description",
+        name: "twitter:description",
+        content: "<Blog name> and description"
       }
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
+    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }]
   },
 
   /*
    ** Customize the progress-bar color
    */
-  loading: { color: '#fff' },
+  loading: { color: "#fff" },
 
   /**
    * Plugins
    */
-  plugins: ['~/plugins/lazyload'],
+  plugins: ["~/plugins/lazyload"],
 
   /*
    ** Nuxt.js modules
    */
   modules: [
-    ['@nuxtjs/google-tag-manager', { id: 'GTM-PV76V8S' }],
-    '@nuxtjs/pwa',
-    '@nuxtjs/sitemap',
-    '@nuxtjs/robots',
-    'nuxt-fontawesome',
-    'nuxt-webfontloader'
+    ["@nuxtjs/google-tag-manager", { id: "GTM-PV76V8S" }],
+    "@nuxtjs/pwa",
+    "@nuxtjs/sitemap",
+    "@nuxtjs/robots",
+    "nuxt-fontawesome",
+    "nuxt-webfontloader"
   ],
 
   /**
@@ -102,7 +102,7 @@ export default {
    */
   webfontloader: {
     google: {
-      families: ['Rubik:400,700', 'Karla:400,700,400i,700i'] // Loads Lato font with weights 400 and 700
+      families: ["Rubik:400,700", "Karla:400,700,400i,700i"] // Loads Lato font with weights 400 and 700
     }
   },
 
@@ -112,18 +112,18 @@ export default {
   fontawesome: {
     imports: [
       {
-        set: '@fortawesome/free-brands-svg-icons',
+        set: "@fortawesome/free-brands-svg-icons",
         icons: [
-          'faTwitter',
-          'faInstagram',
-          'faGithub',
-          'faVuejs',
-          'faReact',
-          'faJs',
-          'faDocker',
-          'faWordpress',
-          'faNodeJs',
-          'faYarn'
+          "faTwitter",
+          "faInstagram",
+          "faGithub",
+          "faVuejs",
+          "faReact",
+          "faJs",
+          "faDocker",
+          "faWordpress",
+          "faNodeJs",
+          "faYarn"
         ]
       }
     ]
@@ -133,26 +133,26 @@ export default {
    * Manifest
    */
   manifest: {
-    name: '<Blog Name>',
-    short_name: '<Blog Name>',
-    lang: 'en'
+    name: "<Blog Name>",
+    short_name: "<Blog Name>",
+    lang: "en"
   },
 
   /**
    * sitemap
    */
   sitemap: {
-    hostname: 'https://example.com',
+    hostname: "https://example.com",
     gzip: true,
-    exclude: ['/admin/']
+    exclude: ["/admin/"]
   },
 
   /**
    * Robots
    */
   robots: {
-    UserAgent: '*',
-    Disallow: '/admin'
+    UserAgent: "*",
+    Disallow: "/admin"
   },
 
   /**
@@ -166,8 +166,8 @@ export default {
    * Transition
    */
   transition: {
-    name: 'fade',
-    mode: 'out-in'
+    name: "fade",
+    mode: "out-in"
   },
 
   /*
@@ -181,20 +181,20 @@ export default {
       // Run ESLint on save
       if (ctx.isDev && ctx.isClient) {
         config.module.rules.push({
-          enforce: 'pre',
+          enforce: "pre",
           test: /\.(js|vue)$/,
-          loader: 'eslint-loader',
+          loader: "eslint-loader",
           exclude: /(node_modules)/
-        })
+        });
       }
 
       config.module.rules.push({
         test: /\.md$/,
-        loader: 'frontmatter-markdown-loader',
+        loader: "frontmatter-markdown-loader",
         options: {
           vue: true
         }
-      })
+      });
     }
   }
-}
+};
